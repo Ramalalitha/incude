@@ -1,0 +1,54 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char s1[10],s2[10],temp;
+	int i,j,x,y;
+	printf("enter string 1\n");
+	gets(s1);
+	printf("enter string 2\n");
+	gets(s2);
+	x=strlen(s1);
+	y=strlen(s2);
+	if(x==y)
+	{
+		for(i=0;i<x-1;i++)
+		{
+			for(j=i+1;j<x;j++)
+			{
+				if(s1[i]>s1[j])
+				{
+					temp=s1[i];
+					s1[i]=s1[j];
+					s1[j]=temp;
+					
+				}
+			}
+		}
+		for(i=0;i<y-1;i++)
+		{
+			for(j=i+1;j<y;j++)
+			{
+				if(s2[i]>s2[j])
+				{
+					temp=s2[i];
+					s2[i]=s2[j];
+					s2[j]=temp;
+					
+				}
+			}
+		}
+		for(i=0;i<x;i++)
+		{
+			if(s1[i]!=s2[i])
+			{
+				printf("not anagram");
+				break;
+				
+			}
+			
+		}
+	}
+	else
+	printf("not anagram");
+}
