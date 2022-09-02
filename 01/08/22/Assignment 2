@@ -1,0 +1,21 @@
+#include<stdio.h>
+int checkevenodd(int);
+int main(){
+int x,ans;
+printf("Enter the element");
+scanf("%d",&x);
+ans=checkevenodd(x);
+if(ans==0)
+printf("Even");
+else
+printf("odd");}
+int checkevenodd(int x)
+{
+if(x%2==0)
+return(0);
+else
+return(1);
+}
+output:
+Enter the element45555692
+Even
